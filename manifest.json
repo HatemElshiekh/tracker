@@ -2,14 +2,15 @@
   "name": "Hatem Daily Tracker",
   "short_name": "Tracker",
   "description": "Daily fitness, meals and supplements tracker",
-  "start_url": "/",
+  "start_url": "/tracker/",
+  "scope": "/tracker/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#0a0a0a",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f5f5f5",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='40' fill='%230a0a0a'/><text x='96' y='130' font-size='110' text-anchor='middle' fill='%23c8f06e'>H</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='40' fill='%232563eb'/><text x='96' y='130' font-size='110' text-anchor='middle' fill='%23ffffff'>H</text></svg>",
       "sizes": "192x192",
       "type": "image/svg+xml",
       "purpose": "any maskable"

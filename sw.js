@@ -1,5 +1,5 @@
 const CACHE = 'tracker-v1';
-const ASSETS = ['/', '/index.html', '/manifest.json'];
+const ASSETS = ['/tracker/', '/tracker/index.html', '/tracker/manifest.json', '/tracker/sw.js'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
@@ -15,7 +15,7 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request).catch(() => caches.match('/index.html')))
+    caches.match(e.request).then(r => r || fetch(e.request).catch(() => caches.match('/tracker/index.html')))
   );
 });
 
@@ -36,7 +36,7 @@ self.addEventListener('push', e => {
 
 self.addEventListener('notificationclick', e => {
   e.notification.close();
-  e.waitUntil(clients.openWindow(e.notification.data.url || '/'));
+  e.waitUntil(clients.openWindow(e.notification.data.url || '/tracker/'));
 });
 
 self.addEventListener('message', e => {
